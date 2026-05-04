@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bala Jee Sweets - Restaurant & Sweets | Marhaowrah, Chapra</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #fafafa; color: #202124; }
+        .top-bar { background: white; padding: 15px; box-shadow: 0 1px 6px rgba(0,0,0,0.1); }
+        .shop-header h1 { font-size: 1.8rem; color: #202124; }
+        .rating { color: #e7711b; font-size: 0.9rem; margin: 5px 0; }
+        .tag { color: #5f6368; font-size: 0.9rem; }
+        .status-open { color: #188038; font-weight: 500; }
+        .tabs { display: flex; border-bottom: 1px solid #dadce0; background: white; overflow-x: auto; }
+        .tabs a { padding: 15px 20px; text-decoration: none; color: #5f6368; font-weight: 500; white-space: nowrap; }
+        .tabs a.active { color: #1a73e8; border-bottom: 3px solid #1a73e8; }
+        .container { max-width: 1100px; margin: auto; padding: 20px 15px; }
+        .card { background: white; border-radius: 8px; padding: 20px; margin-bottom: 15px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+        h2 { font-size: 1.3rem; margin-bottom: 15px; color: #202124; }
+        .btn-group { display: flex; gap: 10px; flex-wrap: wrap; margin: 15px 0; }
+        .btn { padding: 10px 20px; border-radius: 24px; text-decoration: none; font-weight: 500; border: 1px solid #dadce0; color: #1a73e8; background: white; }
+        .btn-primary { background: #1a73e8; color: white; border: none; }
+        .btn-whatsapp { background: #25D366; color: white; border: none; }
+        .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 15px 0; }
+        .gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
+        .shop-photo { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
+        .menu-highlight { display: flex; gap: 15px; overflow-x: auto; padding: 10px 0; }
+        .menu-card { min-width: 140px; text-align: center; }
+        .menu-card img { width: 140px; height: 140px; object-fit: cover; border-radius: 8px; }
+        .menu-card p { font-weight: 500; margin-top: 8px; font-size: 0.9rem; }
+        .info-row { display: flex; align-items: flex-start; gap: 15px; padding: 12px 0; border-bottom: 1px solid #f1f3f4; }
+        .info-row:last-child { border-bottom: none; }
+        .icon { color: #1a73e8; font-size: 1.2rem; width: 24px; }
+        .lang-btn { position: absolute; top: 15px; right: 15px; background: #f1f3f4; border: none; padding: 6px 12px; border-radius: 15px; font-size: 0.8rem; cursor: pointer; }
+        .hidden { display: none; }
+        .review-item { padding: 15px 0; border-bottom: 1px solid #f1f3f4; }
+        .stars { color: #fbbc04; }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <button class="lang-btn" onclick="toggleLang()">हिंदी / EN</button>
+        <div class="shop-header">
+            <h1 class="en">Bala Jee Sweets</h1>
+            <h1 class="hi hidden">बाला जी स्वीट्स</h1>
+            <div class="rating">3.8 ★★★★☆ (11) · <span class="tag">Restaurant</span></div>
+            <div class="status-open en">Open · Closes 8 PM</div>
+            <div class="status-open hi hidden">खुला है · रात 8 बजे बंद</div>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <a href="#overview" class="active en">Overview</a>
+        <a href="#overview" class="active hi hidden">जानकारी</a>
+        <a href="#menu" class="en">Menu</a>
+        <a href="#menu" class="hi hidden">मेनू</a>
+        <a href="#reviews" class="en">Reviews</a>
+        <a href="#reviews" class="hi hidden">समीक्षा</a>
+        <a href="#photos" class="en">Photos</a>
+        <a href="#photos" class="hi hidden">फोटो</a>
+    </div>
+
+    <div class="container">
+        <div class="card" id="overview">
+            <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=800" alt="Bala Jee Sweets Shop" class="shop-photo">
+            
+            <div class="btn-group">
+                <a class="btn btn-primary" href="https://maps.google.com/?q=Marhaowrah,Chapra+Bypass+Rd,Tujar+Pur,Bihar+841442" target="_blank">
+                    <span class="en">Directions</span><span class="hi hidden">दिशा</span>
+                </a>
+                <a class="btn btn-whatsapp" href="https://wa.me/918676989879?text=Namaste%20Bala%20Jee%20Sweets">
+                    <span class="en">WhatsApp</span><span class="hi hidden">व्हाट्सएप</span>
+                </a>
+                <a class="btn" href="tel:+918676989879">
+                    <span class="en">Call</span><span class="hi hidden">कॉल</span>
+                </a>
+            </div>
+
+            <div class="info-row">
+                <div class="icon">📍</div>
+                <div>
+                    <strong class="en">Address</strong><strong class="hi hidden">पता</strong><br>
+                    Marhaowrah, Chapra Bypass Rd, Tujar Pur, Bihar 841442
+                </div>
+            </div>
+
+            <div class="info-row">
+                <div class="icon">⏰</div>
+                <div>
+                    <strong class="en">Hours</strong><strong class="hi hidden">समय</strong><br>
+                    <span class="en">Open · Closes 8 PM</span><span class="hi hidden">खुला है · रात 8 बजे बंद</span><br>
+                    <span style="color:#5f6368; font-size:0.9rem" class="en">12 PM: Usually not too busy</span>
+                    <span style="color:#5f6368; font-size:0.9rem" class="hi hidden">12 PM: आमतौर पर भीड़ नहीं</span>
+                </div>
+            </div>
+
+            <div class="info-row">
+                <div class="icon">📞</div>
+                <div>
+                    <strong class="en">Phone</strong><strong class="hi hidden">फोन</strong><br>
+                    +91 8676989879
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="menu">
+            <h2 class="en">Menu Highlights</h2>
+            <h2 class="hi hidden">मेनू हाइलाइट्स</h2>
+            <div class="menu-highlight">
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1589985270958-8b8e5a5b7b6e?w=300" alt="Matka Dahi">
+                    <p>Matka Dahi</p>
+                </div>
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300" alt="Pirukiya">
+                    <p>Pirukiya</p>
+                </div>
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1631452180519-cb5e7e8c2b70?w=300" alt="Gulab Jamun">
+                    <p class="en">Gulab Jamun</p><p class="hi hidden">गुलाब जामुन</p>
+                </div>
+            </div>
+            <a class="btn btn-whatsapp" href="https://wa.me/918676989879?text=Mujhe%20menu%20aur%20rate%20list%20chahiye" style="margin-top:15px; display:inline-block;">
+                <span class="en">Order on WhatsApp</span><span class="hi hidden">व्हाट्सएप पर ऑर्डर करें</span>
+            </a>
+        </div>
+
+        <div class="card" id="photos">
+            <h2 class="en">Photos</h2>
+            <h2 class="hi hidden">फोटो</h2>
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=500" alt="Shop Front">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500" alt="Sweets Counter">
+                <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?w=500" alt="Laddu">
+                <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=500" alt="Kaju Katli">
+            </div>
+            <p style="text-align:center; color:#5f6368; font-size:0.9rem" class="en">*Add your shop photos here later</p>
+            <p style="text-align:center; color:#5f6368; font-size:0.9rem" class="hi hidden">*बाद में यहाँ अपनी दुकान की फोटो डालें</p>
+        </div>
+
+        <div class="card" id="reviews">
+            <h2 class="en">Reviews · 3.8 ★ (11)</h2>
+            <h2 class="hi hidden">समीक्षा · 3.8 ★ (11)</h2>
+            
+            <div class="review-item">
+                <strong>Ahsan ali</strong> <span class="stars">★★★★★</span>
+                <p class="en">"Matka dahi best hai yaha ka. Restaurant me baith ke khao, maja aa jata hai."</p>
+                <p class="hi hidden">"मटका दही बेस्ट है यहाँ का। रेस्टोरेंट में बैठ के खाओ, मजा आ जाता है।"</p>
+            </div>
+
+            <div class="review-item">
+                <strong>Rahul kumar</strong> <span class="stars">★★★★☆</span>
+                <p class="en">"Pirukiya and gulab jamun fresh milta hai. Staff bhi achha hai."</p>
+                <p class="hi hidden">"पिरुकिया और गुलाब जामुन ताज़ा मिलता है। स्टाफ भी अच्छा है।"</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleLang() {
+            document.querySelectorAll('.en, .hi').forEach(el => el.classList.toggle('hidden'));
+        }
+    </script>
+</body>
+</html>
